@@ -72,7 +72,7 @@ def gs_write():
     }
 
     result = service.spreadsheets().values().update(
-        spreadsheetId=SAMPLE_SPREADSHEET_ID, range=RANGE_NAME,
+        spreadsheetId=SPREADSHEET_ID, range=RANGE_NAME,
         valueInputOption=value_input_option, body=body
     ).execute()
     print('{0} cells updated.'.format(result.get('updateCells')))
